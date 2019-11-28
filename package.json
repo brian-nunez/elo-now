@@ -1,0 +1,20 @@
+{
+  "name": "elo-now",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ./src/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brian-nunez/elo-now.git"
+  },
+  "author": "Brian Nunez",
+  "license": "MIT"
+}
