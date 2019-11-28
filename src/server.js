@@ -15,7 +15,8 @@ app.get('/rating', (req, res) => {
     return res.status(400).send("Incorrect query");
   }
   const rating = elo.rating(r,k,s,e);
-  return res.send(`<b>${rating}</b>`);
+  res.setHeader('Content-Type', 'application/json');
+  return res.send(JSON.stringify({ rating }));
 });
 
 app.get('/ratings', (req, res) => {
@@ -26,6 +27,7 @@ app.get('/ratings', (req, res) => {
     return res.status(400).send("Incorrect query");
   }
   const ratings = elo.calculateRatings(r1, r2, k, s1, s2, e1, e2, d);
+  res.setHeader('Content-Type', 'application/json');
   return res.send(JSON.stringify(ratings));
 });
 
